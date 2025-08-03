@@ -1,0 +1,192 @@
+<!-- Surjeet Zenawi's Portfolio for PLP 1st Hackathon -->
+<!-- A Showcase of my journey as a Forex trader for a decade, engineer, entrepreneur, and newest Software Engineer in town -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surjeet Zenawi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Surjeet Zenawi</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Surjeet Zenawi</h1>
+            <p class="typewriter">A <span id="typewriter-text"></span></p>
+            <a href="#projects" class="cta-button">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>My Journey</h2>
+        <div class="about-content">
+            <!-- Profile picture as Profile.jpeg in the Hackathon 1 root folder -->
+            <img src="Profile.jpeg" alt="Surjeet Zenawi" class="profile-img">
+            <div class="about-text">
+                <p>I'm Surjeet Zenawi, a Geospatial and Petroleum Engineer turned professional Forex trader with over 10 years of experience. I founded Cherizon Waves to share my expertise in Elliott Wave Analysis and am building Nairobi’s largest beer garden,
+                    Kraftory Biergarten, in the diplomatic district. Passionate about coding, I’m currently enrolled at PLP, developing innovative solutions like my Forex Trading system.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>2015 - Engineering Roots</h3>
+                        <p>Earned degrees in Geospatial and Petroleum Engineering, building a strong analytical foundation.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2015-2025 - Forex Mastery</h3>
+                        <p>Mastered Elliott Wave Analysis, became a pro trader, and launched Cherizon Waves.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2025 - Coding & Ventures</h3>
+                        <p>Enrolled at PLP, built a Forex Trading system with MQL4, and started Kraftory Biergarten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <p>HTML</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>CSS</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Python</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 55%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>MQL4</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Elliott Wave Analysis</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Forex Trading</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 97%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" onclick="openModal('modal1')">
+                <h3>Forex Trading System</h3>
+                <p>An automated trading system for MetaTrader 4 using Elliott Wave Analysis.</p>
+                <p class="tech-stack">MQL4 | Forex</p>
+                <a href="#" class="project-link">View Details</a>
+            </div>
+            <div class="project-card" onclick="openModal('modal2')">
+                <h3>Cherizon Waves</h3>
+                <p>A platform for premium Forex and Commodities analysis.</p>
+                <p class="tech-stack">Business | Analysis</p>
+                <a href="https://www.facebook.com/cherizonwaves" class="project-link">Visit Facebook</a>
+            </div>
+            <div class="project-card" onclick="openModal('modal3')">
+                <h3>Kraftory Biergarten</h3>
+                <p>Nairobi’s largest beer garden in the diplomatic district.</p>
+                <p class="tech-stack">Entrepreneurship</p>
+                <a href="https://www.kraftorybiergarten.com" class="project-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>Forex Trading System</h3>
+            <p>An automated trading system leveraging Elliott Wave Analysis for precise trade execution on MetaTrader 4.</p>
+            <p><strong>Tech Stack:</strong> MQL4</p>
+            <a href="#" class="project-link">Visit Project</a>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Cherizon Waves</h3>
+            <p>A platform providing expert Forex and Commodities analysis, empowering traders with actionable insights.</p>
+            <p><strong>Tech Stack:</strong> Business, Analysis</p>
+            <a href="https://www.facebook.com/cherizonwaves" class="project-link">Visit Facebook</a>
+            <a href="https://www.instagram.com/cherizonwaves" class="project-link">Visit Instagram</a>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Kraftory Biergarten</h3>
+            <p>Building Nairobi’s largest beer garden, offering a luxurious experience in the diplomatic district.</p>
+            <p><strong>Tech Stack:</strong> Entrepreneurship</p>
+            <a href="https://www.kraftorybiergarten.com" class="project-link">Visit Website</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Let’s Connect</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> <a href="tel:+254713918668">+254 713918668</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+        </div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/surjeetzenawy"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/surjeet_zenawy"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Surjeetle"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/surjeet-zenawi"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Surjeet Zenawi. Crafted with <i class="fas fa-heart"></i> for the First PLP Hackathon.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

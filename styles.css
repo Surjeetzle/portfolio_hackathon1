@@ -1,0 +1,550 @@
+/* Surjeet Zenawi's Portfolio Styles for PLP 1st Hackathon */
+
+
+/* A royal navy-to-purple gradient with gold accents for a luxurious, elegant look */
+
+
+/* Reset and base styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #FFFFFF;
+    line-height: 1.8;
+}
+
+
+/* Navigation Styling */
+
+.navbar {
+    background: linear-gradient(90deg, #1C2526, #4B0082);
+    /* Navy to royal purple */
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #D4AF37, #FFFFFF);
+    /* Gold to white */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Added for compatibility */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #D4AF37;
+    /* Gold on hover */
+    transform: scale(1.05);
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1C2526, #4B0082);
+    /* Navy to royal purple */
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+    /* Slow, elegant animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero-content {
+    max-width: 1400px;
+    padding: 0 3rem;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #D4AF37, #FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Added for compatibility */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.typewriter {
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.typewriter span {
+    border-right: 0.1em solid #FFFFFF;
+    animation: caret 1s steps(1) infinite;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.3rem 3.5rem;
+    background: linear-gradient(90deg, #D4AF37, #FFFFFF);
+    color: #1C2526;
+    /* Navy text */
+    text-decoration: none;
+    border-radius: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #4B0082, #D4AF37);
+    /* Purple to gold */
+    color: #FFFFFF;
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+    /* Gold glow */
+}
+
+
+/* Section Styling */
+
+.section {
+    padding: 7rem 3rem;
+    text-align: center;
+    background-color: #FFFFFF;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.4rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(90deg, #D4AF37, #FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Added for compatibility */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* About Section */
+
+.about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border: 6px solid #D4AF37;
+    /* Gold border */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    text-align: left;
+    max-width: 800px;
+}
+
+.about-text p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    margin-top: 2.5rem;
+}
+
+.timeline-item {
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+    border-left: 5px solid #D4AF37;
+    /* Gold border */
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #D4AF37;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: 5px;
+}
+
+.timeline-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: #1C2526;
+    margin-bottom: 0.6rem;
+}
+
+
+/* Skills Section */
+
+.skills-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #1C2526;
+}
+
+.progress-bar {
+    background-color: #e5e7eb;
+    border-radius: 30px;
+    height: 14px;
+    overflow: hidden;
+}
+
+.progress {
+    background: linear-gradient(90deg, #1C2526, #D4AF37);
+    /* Navy to gold */
+    height: 100%;
+    transition: width 1.5s ease-in-out;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Projects Section */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #F9FAFB;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+    /* Gold glow */
+}
+
+.project-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #1C2526;
+    margin-bottom: 0.8rem;
+}
+
+.tech-stack {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0.8rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    color: #1C2526;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    color: #D4AF37;
+    transform: scale(1.05);
+}
+
+
+/* Modal Styling */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 650px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #1C2526;
+    margin-bottom: 1.2rem;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #1C2526;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+    color: #D4AF37;
+    transform: rotate(90deg);
+}
+
+
+/* Contact Section */
+
+.contact-form {
+    max-width: 800px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1.3rem;
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4B0082;
+    box-shadow: 0 0 8px rgba(75, 0, 130, 0.3);
+    /* Purple glow */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.contact-info {
+    margin: 3rem 0;
+}
+
+.contact-info p {
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info a {
+    color: #1C2526;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #D4AF37;
+}
+
+.contact-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.contact-links a {
+    color: #1C2526;
+    font-size: 2.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #D4AF37;
+    transform: scale(1.2);
+}
+
+
+/* Footer */
+
+footer {
+    background: linear-gradient(90deg, #1C2526, #4B0082);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+footer .fa-heart {
+    color: #D4AF37;
+}
+
+
+/* Animations */
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 3.8rem;
+    }
+    .typewriter {
+        font-size: 1.6rem;
+    }
+    .section h2 {
+        font-size: 3rem;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .typewriter {
+        font-size: 1.4rem;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.2rem 2rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .project-card {
+        padding: 2rem;
+    }
+    .modal-content {
+        max-width: 90%;
+        padding: 2rem;
+    }
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+}
